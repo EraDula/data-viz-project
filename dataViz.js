@@ -92,11 +92,13 @@ d3.csv("KAG_conversion_data.csv", function (data) {
     .style("background-color", "black")
     .style("border-radius", "5px")
     .style("padding", "10px")
-    .style("color", "white");
+    .style("color", "white")
+    .style("pointer-events", "none");
 
   var showTooltip = function (d) {
-    tooltip.transition().duration(200).style("opacity", 1);
+    tooltip.transition().duration(200);
     tooltip
+      .style("opacity", 1)
       .html(
         "Clicks: " +
           d.Clicks +
