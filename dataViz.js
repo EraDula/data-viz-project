@@ -129,6 +129,7 @@ d3.csv("KAG_conversion_data.csv", function (data) {
     .append("circle")
     .attr("class", "bubbles")
     .on("mouseover", showTooltip)
+    .on("mousemove", moveTooltip)
     .on("mouseleave", hideTooltip)
     .attr("cx", function (d) {
       return x(+d.Clicks);
@@ -248,6 +249,7 @@ d3.csv("KAG_conversion_data.csv", function (data) {
           .style("left", d3.mouse(this)[0] + 30 + "px")
           .style("top", d3.mouse(this)[1] + 30 + "px");
       })
+      .on("mousemove", moveTooltip)
       .on("mouseleave", hideTooltip)
       .transition()
       .duration(1500)
