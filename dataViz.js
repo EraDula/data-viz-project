@@ -127,6 +127,8 @@ d3.csv("KAG_conversion_data.csv", function (data) {
     .enter()
     .append("circle")
     .attr("class", "bubbles")
+    .on("mouseover", showTooltip)
+    .on("mouseleave", hideTooltip)
     .attr("cx", function (d) {
       return x(+d.Clicks);
     })
@@ -138,9 +140,8 @@ d3.csv("KAG_conversion_data.csv", function (data) {
     })
     .style("fill", function (d) {
       return color("Clicks");
-    })
-    .on("mouseover", showTooltip)
-    .on("mouseleave", hideTooltip);
+    });
+    
 
   var valuesToShow = [1, 1000000, 3500000];
   var xCircle = 600;
