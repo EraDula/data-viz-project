@@ -19,7 +19,8 @@ var svg = d3
   .attr("width", width + margin.left + margin.right + 10)
   .attr("height", height + margin.top + margin.bottom + 15)
   .append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+  .style("position", "absolute");
 
 //Read the data
 d3.csv("KAG_conversion_data.csv", function (data) {
@@ -85,6 +86,8 @@ d3.csv("KAG_conversion_data.csv", function (data) {
     .select("#my_dataviz")
     .append("div")
     .style("opacity", 0)
+    .style("position", "absolute")
+    .style("z-index", 2)
     .attr("class", "tooltip")
     .style("background-color", "black")
     .style("border-radius", "5px")
