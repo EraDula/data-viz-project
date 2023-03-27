@@ -95,9 +95,8 @@ d3.csv("KAG_conversion_data.csv", function (data) {
     .style("color", "white");
 
   var showTooltip = function (d) {
-    tooltip.transition().duration(200);
+    tooltip.transition().duration(200).style("opacity", 1);
     tooltip
-      .style("opacity", 1)
       .html(
         "Clicks: " +
           d.Clicks +
