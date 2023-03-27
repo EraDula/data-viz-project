@@ -1,4 +1,4 @@
-# Facebook AD Campaigns Visualisation
+# Facebook AD Campaigns Visualisation 📈
 
 This is a web application which utilises data visualisation techniques to implement a bubble plot that provides insights on the factors that effect how impactful Facebook advertisements are and how often it is the case that the products advertised are actually bought. The visualisation has been implemented using [D3](https://d3js.org/).
 
