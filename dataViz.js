@@ -140,7 +140,6 @@ d3.csv("KAG_conversion_data.csv", function (data) {
       return color("Clicks");
     })
     .on("mouseover", showTooltip)
-    .on("mousemove", moveTooltip)
     .on("mouseleave", hideTooltip);
 
   var valuesToShow = [1, 1000000, 3500000];
@@ -247,6 +246,7 @@ d3.csv("KAG_conversion_data.csv", function (data) {
           .style("left", d3.mouse(this)[0] + 30 + "px")
           .style("top", d3.mouse(this)[1] + 30 + "px");
       })
+      .on("mouseleave", hideTooltip)
       .transition()
       .duration(1500)
       .attr("cx", function (d) {
